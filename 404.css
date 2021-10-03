@@ -1,0 +1,11 @@
+
+body{
+	width: 100vw;
+	height: 100vh;
+	background-image: url("https://thatshelf.com/wp-content/uploads/2016/07/Stranger-Things-Nancy-Featured.jpg");
+	position: fixed;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-attachment: fixed;
+}

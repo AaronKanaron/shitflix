@@ -1,0 +1,433 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;800;900&display=swap");
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #18181c;
+  font-family: 'Montserrat', sans-serif;
+}
+
+section {
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+section .popular {
+  width: 90vw;
+}
+
+section .popular .title {
+  width: 80vw;
+  height: 10vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+section .popular .title h1 {
+  color: white;
+  text-transform: uppercase;
+  font-size: 1.2vmax;
+}
+
+section .popular .title .arrow {
+  display: none;
+  font-size: 1.2vmax;
+  color: white;
+  --ionicon-stroke-width: 2vmax;
+  font-weight: 900;
+}
+
+section .popular .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 50vh;
+  background: #18181c;
+  overflow-y: hidden;
+  overflow-x: scroll;
+  position: relative;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+section .popular .container::-webkit-scrollbar {
+  display: none;
+}
+
+section .popular .container .scrolling-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-scroll-snap-type: x mandatory;
+      scroll-snap-type: x mandatory;
+}
+
+section .popular .container .scrolling-wrapper > div {
+  scroll-snap-align: center;
+}
+
+section .popular .container .scrolling-wrapper .card {
+  margin: 0 .2vw;
+  border-radius: 1vw;
+  position: relative;
+  cursor: pointer;
+}
+
+section .popular .container .scrolling-wrapper .card img {
+  width: 18vw;
+  height: 50vh !important;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: .6vw;
+}
+
+section .popular .container .scrolling-wrapper .card .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #00000000), to(#000000));
+  background: linear-gradient(to bottom, #00000000 50%, #000000 100%);
+}
+
+section .popular .container .scrolling-wrapper .card .wrapper {
+  position: absolute;
+  width: inherit;
+  bottom: 0;
+  right: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+section .popular .container .scrolling-wrapper .card .wrapper h1 {
+  color: white;
+  overflow: hidden;
+  width: inherit;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 1vmax;
+}
+
+section .popular .container .scrolling-wrapper .card .wrapper p {
+  font-size: 1vmax;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: white;
+  opacity: 0.7;
+  width: 10vmax;
+}
+
+section .popular .container .more_button {
+  margin: 0 .2vw;
+  border-radius: 1vw;
+  position: relative;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 18vw;
+  height: 50vh !important;
+  background: #151419;
+}
+
+section .popular .container .more_button span {
+  color: white;
+  text-align: center;
+  font-size: 2vmax;
+  width: 18vw;
+  background-color: #151419;
+  z-index: 1;
+}
+
+section .popular .container .more_button .arrow {
+  position: absolute;
+  z-index: 0;
+  opacity: 0;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+section .popular .container .more_button:hover .arrow {
+  -webkit-transform: translateY(30px);
+          transform: translateY(30px);
+  opacity: 1;
+}
+
+section .popular:hover .title .arrow {
+  display: unset;
+}
+
+header {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 80vw;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  padding: 30px 10%;
+  background-color: #151419;
+  -webkit-transition: background-image 500ms ease-out, -webkit-transform 200ms ease-out, -webkit-filter 200ms ease-out;
+  transition: background-image 500ms ease-out, -webkit-transform 200ms ease-out, -webkit-filter 200ms ease-out;
+  transition: transform 200ms ease-out, background-image 500ms ease-out, filter 200ms ease-out;
+  transition: transform 200ms ease-out, background-image 500ms ease-out, filter 200ms ease-out, -webkit-transform 200ms ease-out, -webkit-filter 200ms ease-out;
+  /* Display Correct on PC */
+}
+
+header .logo {
+  position: absolute;
+  left: 3vmax;
+  content: url(https://image.tmdb.org/t/p/original/wwemzKWzjKYJFfCeiB57q3r4Bcm.svg);
+  width: 10vmax;
+}
+
+header .nav-links {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-left: 0;
+}
+
+header .nav-links a {
+  font-family: 'Montserrat';
+  font-weight: 600;
+  color: #69686d;
+  text-decoration: none;
+}
+
+header .nav-links a.active {
+  color: white;
+}
+
+header .nav-links li {
+  padding: 0px 20px;
+}
+
+header .nav-links li a {
+  font-size: clamp(1rem, 0.7vw, 3rem);
+}
+
+header .cta {
+  font-weight: 500;
+  color: #F9F9F9;
+  text-decoration: none;
+  margin-left: 20px;
+  padding: 9px 25px;
+  font-size: clamp(1.1rem, 0.7vw, 3rem);
+  background-color: #ff4d54;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+header .cta:hover {
+  background-color: #ff4d54;
+}
+
+header .menu {
+  display: none;
+}
+
+@media only screen and (max-width: 800px) {
+  header .nav-links, header .cta {
+    display: none;
+  }
+  header .menu {
+    display: initial;
+  }
+}
+
+.background {
+  position: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  width: 100vw;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+
+.background:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: -webkit-gradient(linear, left top, left bottom, from(#00000000), to(#0f0f0f));
+  background: linear-gradient(to bottom, #00000000, #0f0f0f);
+}
+
+.background .wrapper {
+  width: 50vw;
+  height: 50vh;
+  z-index: 3;
+}
+
+.background .wrapper h1 {
+  color: white;
+  font-weight: 900;
+  font-size: 4.5vmax;
+  width: 90%;
+  margin: 0;
+  z-index: inherit;
+}
+
+.background .wrapper p {
+  color: white;
+  font-size: 1.2vmax;
+  line-height: 2vmax;
+  opacity: 0.8;
+  width: 60%;
+  z-index: inherit;
+}
+
+.background .background_title {
+  pointer-events: none;
+  position: absolute;
+  width: 90vw;
+  height: 60vh;
+}
+
+.background .background_title span {
+  width: 90%;
+  position: absolute;
+  font-weight: 900;
+  font-size: 9vmax;
+  color: white;
+  opacity: 0.1;
+}
+
+.background #providers {
+  width: 30vw;
+  height: 45vh;
+  z-index: 100;
+  border-radius: 1vmax;
+}
+
+.background #providers h1 {
+  text-align: center;
+  color: white;
+  font-weight: 700;
+  font-size: 1.4vmax;
+}
+
+.background #providers .category {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.background #providers .category button {
+  border: none;
+  background: transparent;
+  color: white;
+  font-size: 1.3vmax;
+}
+
+.background #providers .category span {
+  color: white;
+  font-synthesis: 1.3vmax;
+}
+
+.background #providers #content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 1vmax 0;
+  gap: 20px;
+}
+
+.background #providers #content img {
+  width: 3.5vmax;
+  border-radius: .85vmax;
+  margin: 0;
+}
+
+.background #providers #content p {
+  color: white;
+  font-size: 1.5vmax;
+}
+/*# sourceMappingURL=index.css.map */
