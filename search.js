@@ -13,6 +13,7 @@ async function searchContent(query) {
 		return response.json();
 
 	}).then((data)=> {
+		document.getElementById("title").innerHTML = "Showing results for: " + query
 		data.results.map((obj) => {
 			if(obj.poster_path != null) {
 			
