@@ -6,7 +6,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
 
 async function searchContent(query) {
-	await fetch(" https://api.themoviedb.org/3/search/movie?api_key=" + env.api_key + "&language=" + env.lang + "&query=" + query + "&page=1&include_adult=false", {
+	await fetch(" https://api.themoviedb.org/3/search/movie?api_key=" + env.api_key + "&language=" + env.lang + "&query=" + query + "&page=1&include_adult=" + env.adult, {
 		method: "GET"
 
 	}).then((response) => {
