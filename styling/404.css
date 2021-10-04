@@ -1,0 +1,97 @@
+.background {
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-image: url("https://thatshelf.com/wp-content/uploads/2016/07/Stranger-Things-Nancy-Featured.jpg");
+  position: absolute;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  z-index: 2;
+}
+
+.background .wrapper {
+  width: 100vw;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.background .wrapper .container {
+  width: 80vw;
+  height: 70vh;
+}
+
+.background .wrapper .container h1 {
+  width: 40%;
+  color: white;
+  font-size: 3.4vmax;
+}
+
+.background .wrapper .container p {
+  color: white;
+  font-size: 1.1vmax;
+  opacity: 0.8;
+  line-height: 1.5vmax;
+  width: 40%;
+}
+
+.background .wrapper .container .search {
+  width: 40%;
+  height: 3vmax;
+  margin-top: 3vmax;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.background .wrapper .container .search input {
+  width: 100%;
+  height: inherit;
+  font-size: 1.5vmax;
+  padding: 0.5vmax 3vmax 0.5vmax 1.2vmax;
+  color: #5d5d5d;
+}
+
+.background .wrapper .container .search input::-webkit-input-placeholder {
+  color: #9b9b9b;
+  font-size: 1.7vmax;
+}
+
+.background .wrapper .container .search input:-ms-input-placeholder {
+  color: #9b9b9b;
+  font-size: 1.7vmax;
+}
+
+.background .wrapper .container .search input::-ms-input-placeholder {
+  color: #9b9b9b;
+  font-size: 1.7vmax;
+}
+
+.background .wrapper .container .search input::placeholder {
+  color: #9b9b9b;
+  font-size: 1.7vmax;
+}
+
+.background .wrapper .container .search i {
+  position: absolute;
+  margin-right: .75vmax;
+  font-size: 1.7vmax;
+  color: #444444;
+}
+/*# sourceMappingURL=404.css.map */

@@ -1,0 +1,27 @@
+.wrapper{
+	width: 100vw;
+	display: flex;
+	justify-content: center;
+	.content{
+		width: 80%;
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		.card{
+			margin: 0 .2vw;
+			border-radius: 1vw;
+			position: relative;
+			cursor: pointer;
+			width: 18vw;
+			height: 50vh;
+			margin: 1vmax;
+			img{
+
+
+				width: 18vw;
+				height: 50vh !important;
+				object-fit: cover;
+				border-radius: .6vw;
+			}
+		}
+	}
+}

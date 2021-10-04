@@ -1,0 +1,74 @@
+
+.background{
+	width: 100vw;
+	height: 100vh;
+	top: 0;
+	left: 0;
+	background-image: url("https://thatshelf.com/wp-content/uploads/2016/07/Stranger-Things-Nancy-Featured.jpg");
+	position: absolute;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-attachment: fixed;
+	z-index: 2;
+	// &:after{
+	// 	content: "";
+	// 	position: absolute;
+	// 	top: 0;
+	// 	left: 0;
+	// 	z-index: -1;
+	// 	width: 100vw;
+	// 	height: 100vh;
+	// 	background:
+	// 		radial-gradient(transparent 50%, black 120%),	 
+	// 		linear-gradient(to bottom, #0f0f0f 0%, #00000000 15%);
+	// }
+	.wrapper {
+		width: 100vw;
+		height: 100vh;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		.container{
+			width: 80vw;
+			height: 70vh;
+			h1{
+				width: 40%;
+				color: white;
+				font-size: 3.4vmax;
+			}
+			p{
+				color:white;
+				font-size: 1.1vmax;
+				opacity: 0.8;
+				line-height: 1.5vmax;
+				width: 40%;
+			}
+			.search{
+				width: 40%;
+				height: 3vmax;
+				margin-top: 3vmax;
+				display: flex;
+				justify-content: end;
+				align-items: center;
+				input{
+					width: 100%;
+					height: inherit;
+					font-size: 1.5vmax;
+					padding: 0.5vmax 3vmax 0.5vmax 1.2vmax;
+					color: #5d5d5d;
+					&::placeholder{
+						color: #9b9b9b;
+						font-size: 1.7vmax;
+					}
+				}
+				i{
+					position: absolute;
+					margin-right: .75vmax;
+					font-size: 1.7vmax;
+					color: #444444;
+				}
+			}
+		}
+	}
+}

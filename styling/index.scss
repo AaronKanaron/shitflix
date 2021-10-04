@@ -1,14 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;800;900&display=swap');
 
 
-
-body{
-	margin: 0;
-	padding: 0;
-	background-color: #18181c;
-	font-family: 'Montserrat', sans-serif;
-}
-
 section{
 	width: 100vw;
 	display: flex;
@@ -166,77 +158,7 @@ section{
 	
 }
 
-header{
-    position: relative;
-    display: flex;
-	justify-content: center;
-	align-items: center;
-    width: 80vw;
-    top: 0;
-    left: 0;
-    z-index: 1000;
-    padding: 30px 10%;
-	background-color: #151419;
-    transition: transform 200ms ease-out, background-image 500ms ease-out, filter 200ms ease-out;
-    .logo {
-		position: absolute;
-		left: 3vmax;
-		content: url(https://image.tmdb.org/t/p/original/wwemzKWzjKYJFfCeiB57q3r4Bcm.svg);
-		width: 10vmax;
-		
-    }
 
-    .nav-links{
-        list-style: none;
-        display: flex;
-        justify-content: center;
-		align-items: center;
-		padding-left: 0;
-        a{
-			font-family: 'Montserrat';
-            font-weight: 600;
-            color: #69686d;
-            text-decoration: none;
-			&.active{
-				color: white;
-			}
-        }
-
-        li{
-            padding: 0px 20px;
-            a{
-                font-size: clamp(1rem, .7vw, 3rem);
-            }
-        }
-    }
-
-
-    .cta{
-        font-weight: 500;
-        color: #F9F9F9;
-        text-decoration: none;
-        margin-left: 20px;
-        padding: 9px 25px;
-        font-size: clamp(1.1rem, .7vw, 3rem);
-        background-color: #ff4d54; //lighten($color: #ff4d54, $amount: 10%);
-        border: none;
-        border-radius: 50px;
-        cursor: pointer;
-        transition: all 0.3s ease 0s;
-        &:hover{
-            background-color: #ff4d54;
-        }
-    }
-
-    /* Display Correct on PC */
-
-    .menu { display: none; }
-
-    @media only screen and (max-width: 800px) {
-        .nav-links, .cta{ display: none; }
-        .menu{ display: initial; }
-    }
-}
 
 .background{
 	position: fixed;
@@ -246,6 +168,9 @@ header{
 	background-attachment: fixed;
 	width: 100vw;
 	height: 100vh;
+	top: 0;
+	left: 0;
+	z-index: -1;
 	&:after{
 		content: "";
 		position: absolute;
@@ -254,6 +179,7 @@ header{
 		width: 100vw;
 		height: 100vh;
 		background: linear-gradient(to bottom, #00000000, #0f0f0f);
+			
 	}
 	
 	display: flex;
@@ -290,12 +216,14 @@ header{
 		width: 90vw;
 		height: 60vh;
 		span{
+			white-space: nowrap;
 			width: 90%;
 			position: absolute;
 			font-weight: 900;
 			font-size: 9vmax;
 			color: white;
 			opacity: 0.1;
+			overflow: hidden;
 		}
 	}
 

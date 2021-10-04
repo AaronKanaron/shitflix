@@ -1,0 +1,236 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;800;900&display=swap");
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #18181c;
+  font-family: 'Montserrat', sans-serif;
+  overflow-x: hidden;
+}
+
+.navbar {
+  z-index: 3;
+}
+
+.navbar.transparent {
+  position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 80vw;
+  height: 3vh;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  padding: 30px 10%;
+}
+
+.navbar.transparent:after {
+  content: "";
+  pointer-events: none;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  position: absolute;
+  background: radial-gradient(transparent 60%, black 120%), -webkit-gradient(linear, left top, left bottom, color-stop(-5%, #0f0f0f), color-stop(15%, #00000000));
+  background: radial-gradient(transparent 60%, black 120%), linear-gradient(to bottom, #0f0f0f -5%, #00000000 15%);
+}
+
+.navbar.transparent .logo {
+  z-index: 3;
+  position: absolute;
+  left: 3vmax;
+  content: url(https://image.tmdb.org/t/p/original/wwemzKWzjKYJFfCeiB57q3r4Bcm.svg);
+  width: 8vmax;
+}
+
+.navbar.transparent .nav-links {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-left: 0;
+}
+
+.navbar.transparent .nav-links a {
+  z-index: inherit;
+  font-family: 'Montserrat';
+  font-weight: 400;
+  color: #afafaf;
+  text-decoration: none;
+}
+
+.navbar.transparent .nav-links li {
+  z-index: 3;
+  padding: 0px 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.navbar.transparent .nav-links li a {
+  font-size: clamp(1rem, 0.7vw, 3rem);
+}
+
+.navbar.transparent .nav-links li.search input {
+  margin-left: 1.5vmax;
+  color: white;
+  font-weight: 600;
+  background: none;
+  border: none;
+  font-size: clamp(1rem, 0.7vw, 3rem);
+  font-family: 'Montserrat';
+  width: 5vmax;
+}
+
+.navbar.transparent .nav-links li.search input::-webkit-input-placeholder {
+  color: white;
+  opacity: 1;
+  font-size: clamp(1rem, 0.6vw, 3rem);
+}
+
+.navbar.transparent .nav-links li.search input:-ms-input-placeholder {
+  color: white;
+  opacity: 1;
+  font-size: clamp(1rem, 0.6vw, 3rem);
+}
+
+.navbar.transparent .nav-links li.search input::-ms-input-placeholder {
+  color: white;
+  opacity: 1;
+  font-size: clamp(1rem, 0.6vw, 3rem);
+}
+
+.navbar.transparent .nav-links li.search input::placeholder {
+  color: white;
+  opacity: 1;
+  font-size: clamp(1rem, 0.6vw, 3rem);
+}
+
+.navbar.transparent .nav-links li.search input:focus {
+  outline: none;
+}
+
+.navbar.transparent .nav-links li.search i {
+  color: white;
+  margin-right: .3vmax;
+  position: absolute;
+}
+
+.navbar.solid {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 80vw;
+  height: 6vh;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  padding: 30px 10%;
+  background-color: #151419;
+  -webkit-transition: background-image 500ms ease-out, -webkit-transform 200ms ease-out, -webkit-filter 200ms ease-out;
+  transition: background-image 500ms ease-out, -webkit-transform 200ms ease-out, -webkit-filter 200ms ease-out;
+  transition: transform 200ms ease-out, background-image 500ms ease-out, filter 200ms ease-out;
+  transition: transform 200ms ease-out, background-image 500ms ease-out, filter 200ms ease-out, -webkit-transform 200ms ease-out, -webkit-filter 200ms ease-out;
+}
+
+.navbar.solid .logo {
+  position: absolute;
+  left: 3vmax;
+  content: url(https://image.tmdb.org/t/p/original/wwemzKWzjKYJFfCeiB57q3r4Bcm.svg);
+  width: 8vmax;
+}
+
+.navbar.solid .nav-links {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-left: 0;
+}
+
+.navbar.solid .nav-links a {
+  font-family: 'Montserrat';
+  font-weight: 600;
+  color: #69686d;
+  text-decoration: none;
+}
+
+.navbar.solid .nav-links a.active {
+  color: white;
+}
+
+.navbar.solid .nav-links li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0px 20px;
+}
+
+.navbar.solid .nav-links li a {
+  font-size: clamp(1rem, 0.7vw, 3rem);
+}
+
+.navbar.solid .nav-links li ion-icon {
+  font-size: clamp(1rem, 0.7vw, 3rem);
+  font-weight: 600;
+  color: #69686d;
+  position: absolute;
+  padding: .2vmax;
+  pointer-events: none;
+}
+
+.navbar.solid .nav-links li input {
+  padding: 0;
+  background: transparent;
+  border: none;
+  width: 1vmax;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s, width 0.3s, padding-left 0.3s;
+  transition: opacity 0.3s, width 0.3s, padding-left 0.3s;
+  padding: 1vmax;
+  color: white;
+  font-family: 'Montserrat';
+  font-weight: 600;
+}
+
+.navbar.solid .nav-links li input:focus {
+  opacity: 1;
+  width: 8vmax;
+  outline: none;
+  padding-left: 1.5vmax;
+}
+/*# sourceMappingURL=global.css.map */

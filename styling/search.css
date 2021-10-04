@@ -1,0 +1,36 @@
+.wrapper {
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.wrapper .content {
+  width: 80%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+}
+
+.wrapper .content .card {
+  margin: 0 .2vw;
+  border-radius: 1vw;
+  position: relative;
+  cursor: pointer;
+  width: 18vw;
+  height: 50vh;
+  margin: 1vmax;
+}
+
+.wrapper .content .card img {
+  width: 18vw;
+  height: 50vh !important;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: .6vw;
+}
+/*# sourceMappingURL=search.css.map */

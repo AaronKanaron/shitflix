@@ -1,0 +1,182 @@
+//FONTS
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;800;900&display=swap');
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+
+body{
+	margin: 0;
+	padding: 0;
+	background-color: #18181c;
+	font-family: 'Montserrat', sans-serif;
+	overflow-x: hidden;
+}
+
+.navbar{
+	z-index: 3;
+	&.transparent{
+		
+		position: fixed;
+		display: flex;
+		justify-content: end;
+		align-items: center;
+		width: 80vw;
+		height: 3vh;
+		top: 0;
+		left: 0;
+		z-index: 3;
+		padding: 30px 10%;
+		&:after{
+			content: "";
+			pointer-events: none;
+			width: 100vw;
+			height: 100vh;
+			z-index: 1;
+			left: 0;
+			top: 0;
+			position: absolute;
+			background: 
+			radial-gradient(transparent 60%, black 120%),
+			linear-gradient(to bottom, #0f0f0f -5%, #00000000 15%);
+		}
+		.logo{
+			z-index: 3;
+			position: absolute;
+			left: 3vmax;
+			content: url(https://image.tmdb.org/t/p/original/wwemzKWzjKYJFfCeiB57q3r4Bcm.svg);
+			width: 8vmax;
+		}
+
+		.nav-links{
+			list-style: none;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			padding-left: 0;
+			a{
+				z-index: inherit;
+				font-family: 'Montserrat';
+				font-weight: 400;
+				color: #afafaf;
+				text-decoration: none;
+			}
+
+			li{
+				z-index: 3;
+				padding: 0px 20px;
+				display: flex;
+				align-items: center;
+
+				a{
+					font-size: clamp(1rem, .7vw, 3rem);
+				}
+
+				&.search{
+					input{
+						margin-left: 1.5vmax;
+						color: white;
+						font-weight: 600;
+						background: none;
+						border: none;
+						font-size: clamp(1rem, .7vw, 3rem);
+						font-family: 'Montserrat';
+						width: 5vmax;
+						
+						&::placeholder{
+							color: white;
+							opacity: 1;
+							font-size: clamp(1rem, .6vw, 3rem);
+						}
+						&:focus{
+							outline: none;
+						}
+					}
+
+					i{
+						color: white;
+						margin-right: .3vmax;
+						position: absolute;
+					}
+				}
+			}
+		}
+	}
+
+	&.solid{
+		position: relative;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 80vw;
+		height: 6vh;
+		top: 0;
+		left: 0;
+		z-index: 1000;
+		padding: 30px 10%;
+		background-color: #151419;
+		transition: transform 200ms ease-out, background-image 500ms ease-out, filter 200ms ease-out;
+		
+		.logo {
+			position: absolute;
+			left: 3vmax;
+			content: url(https://image.tmdb.org/t/p/original/wwemzKWzjKYJFfCeiB57q3r4Bcm.svg);
+			width: 8vmax;
+			
+		}
+
+		.nav-links{
+			list-style: none;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			padding-left: 0;
+			a{
+				font-family: 'Montserrat';
+				font-weight: 600;
+				color: #69686d;
+				text-decoration: none;
+				&.active{
+					color: white;
+				}
+			}
+
+			li{
+				display: flex;
+				align-items: center;
+
+				padding: 0px 20px;
+
+				a{
+					font-size: clamp(1rem, .7vw, 3rem);
+				}
+
+				ion-icon{
+					font-size: clamp(1rem, .7vw, 3rem);
+					font-weight: 600;
+					color: #69686d;
+					position: absolute;
+					padding: .2vmax;
+					pointer-events: none;
+				}
+
+				input{
+					padding: 0;
+					background: transparent;
+					border: none;
+					width: 1vmax;
+					opacity: 0;
+					transition: opacity 0.3s, width 0.3s, padding-left 0.3s;
+					padding: 1vmax;
+					color: white;
+					font-family: 'Montserrat';
+					font-weight: 600;
+					&:focus{
+						opacity: 1;
+						width: 8vmax;
+						outline: none;
+						padding-left: 1.5vmax;
+
+					}
+				}
+			}
+		}
+	}
+}
