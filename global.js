@@ -3,9 +3,11 @@
 /*ENVIROMENT KEYS*/
 let env = {
 	"api_key" : "3555d01f29466ed45ea26ca820ff7474",
-	"lang" : "en-US",
-	"adult" : "false"
+	"lang" : navigator.language,
 }
+
+console.log(env.lang)
+console.log(navigator.language)
 
 /*ELEMENTS*/
 const searchElement = document.getElementById("search")

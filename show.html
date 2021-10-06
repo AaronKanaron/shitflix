@@ -2,46 +2,43 @@
 
 <html lang="en">
 	<head>
-		<!-- Meta -->
 		<meta charset="UTF-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		
-		<!-- Title -->
 		<title>Document</title>
-		
-		<!-- Styling -->
-		<link rel="stylesheet" href="styling/404.css">
-		<link rel="stylesheet" href="styling/global.css">
-
-		<!-- Scripts -->
+		<!-- Script -->
+		<script defer src="env.js"></script>
+		<script defer src="show.js"></script>
 		<script defer src="global.js"></script>
+		<!-- Styling -->
+		<link rel="stylesheet" href="styling/index.css">
+		<link rel="stylesheet" href="styling/global.css">
 	</head>
+	
 	<body>
 		<div class="navbar transparent">
 			<a href="index.html" class="logo"><img src="" alt=""></a>
 			<nav>
 				<ul class="nav-links">
 					<li><a href="index.html">Home</a></li>
-					<li><a href="/index.html">Movies</a></li>
+					<li><a href="/about.html">Movies</a></li>
 					<li><a href="/contact.html">Series</a></li>
 					<li><a href="/contact.html">Recently added</a></li>
 					<li class="search"><input type="text" placeholder="Search" id="search"><i class="material-icons">search</i></li>
 				</ul>
 			</nav>
         <div>
-			
-		<div class="background">
-			<div class="wrapper">
-				<div class="container">
-					<h1>Woah, you're in the wrong place.</h1>
-					<p>I guess you're stuck in the upside down forever...<br>or you could just keep looking for that movie instead</p>
-					
-					<div class="search">
-						<input type="text" placeholder="Search" id="search">
-						<i class="material-icons">search</i>
-					</div>
+		<div class="background" id="background">
+			<div id="providers">
+				<h1>Avaliable Providers in US</h1>
+				<div class="category" id="category">
+					<button class="active" onclick="document.getElementById('content').innerHTML = flatrate">Flatrate</button>
+					<span>-</span>
+					<button onclick="document.getElementById('content').innerHTML = rent">Rent</button>
+					<span>-</span>
+					<button onclick="document.getElementById('content').innerHTML = buy">Buy</button>
 				</div>
+				<div id="content"></div>
 			</div>
 		</div>
 	</body>

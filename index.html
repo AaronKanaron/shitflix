@@ -29,9 +29,9 @@
                 <ul class="nav-links">
                     <!-- <li><a class="active" href="#">Startsida</a></li> -->
                     <li><a href="#">Home</a></li>
-                    <li><a class="active" href="/about.html">Movies</a></li>
-                    <li><a href="/contact.html">Series</a></li>
-					<li><a href="/contact.html">Recently added</a></li>
+                    <li><a class="active" href="#">Movies</a></li>
+                    <li><a href="/show.html">Series</a></li>
+					<li><a href="/todo.html">Recently added</a></li>
 					<li>
 						<input type="text" placeholder="Search..." value="" id="search">
 						<ion-icon name="search"></ion-icon>
@@ -39,9 +39,35 @@
                 </ul>
             </nav>
         </div>
+
+
+		<div class="container">
+			<div class="card__wrapper">
+				<div class="card__header">
+					<h2 class="card__headline">Popular Movies</h2>
+					<div class="card__arrows">
+						<a class="arrow disabled arrow-prev"></a>
+						<a class="arrow arrow-next"></a>
+					</div>
+				</div>
+				<ul class="card" id="popular-movies">
+				</ul>
+			</div>
+			<div class="card__wrapper">
+				<div class="card__header">
+					<h2 class="card__headline">Popular Series</h2>
+					<div class="card__arrows">
+						<a class="arrow disabled arrow-prev"></a>
+						<a class="arrow arrow-next"></a>
+					</div>
+				</div>
+				<ul class="card" id="popular-series">
+				</ul>
+			</div>
+		</div>
 		
-		<section>
-			<div class="popular">
+		<!-- <div class="list">
+			<div class="section">
 				<div class="title">
 					<h1>Popular Right Now</h1>
 					<ion-icon class="arrow" name="chevron-forward-outline"></ion-icon>
@@ -49,11 +75,11 @@
 				
 				<div class="container">
 					<div class="overlay"></div>
-					<div class="scrolling-wrapper" id="popular-scrolling-wrapper">
+					<div class="scrolling-wrapper" id="popular-movie-scrolling-wrapper">
 					</div>
 					<div class="more_button" id="more-button" onclick="nextPage()"><span>Show More</span><span class="arrow">→</span></div>
 				</div>
 			</div>
-		</section>
+		</div> -->
 	</body>
 </html>
