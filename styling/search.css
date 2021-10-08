@@ -33,6 +33,7 @@
   cursor: pointer;
   width: 18vw;
   height: 50vh;
+  border-radius: .6vw;
   margin: 1vmax;
 }
 

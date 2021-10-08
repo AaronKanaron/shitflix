@@ -61,6 +61,8 @@ body{
 		// how it works: total width devided by columns minus left and right margin per box minus negativ margin of outer container.
 		// oh and IE11 does not support the shorthand "flex" with calc, so you have to use flex-basis etc. separately;
 		margin: 10px;
+		border-radius: .5vmax;
+
 		display: flex;
 		justify-content: center;
 		align-items: center;

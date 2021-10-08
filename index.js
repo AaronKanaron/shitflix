@@ -1,5 +1,24 @@
 let page = 1
 
+let idArray = [
+	"popular",
+	"horror",
+	"action",
+	"mystery"
+]
+
+for (let id = 0; id < idArray.length; id++) {
+	for (let cards = 0; cards < 5; cards++) {
+		document.getElementById(idArray[id]).innerHTML += 
+		`
+		<li class="card__item skeleton">
+			<img class="card__item__image">
+		</li>
+		`
+	}
+	
+}
+
 
 async function loadPopular(currentPage){
 	Promise.all([
@@ -18,21 +37,18 @@ async function loadPopular(currentPage){
 			}));
 
 		}).then((data)=> {
-			//POPULAR MOVIES
+			//Clear all elements
+			for (let i = 0; i < idArray.length; i++) {
+				document.getElementById(idArray[i]).innerHTML = ""
+			}
 
-			let idArray = [
-				"popular",
-				"horror",
-				"action",
-				"mystery"
-			]
 
 			for (let i = 0; i < idArray.length; i++) {
 				data[i].results.map((obj) => {
 					document.getElementById(idArray[i]).innerHTML += 
 					`
 					<li class="card__item" onclick="window.location.href = 'content/movie.html?id=` + obj.id +`'">
-						<img class="card__item__image" src="https://image.tmdb.org/t/p/w500` + obj.poster_path + `" alt="` + obj.title + `">
+						<img class="card__item__image skeleton" src="https://image.tmdb.org/t/p/w500` + obj.poster_path + `" alt="` + obj.title + `">
 						<!--
 						<div class="overlay"></div>
 						<div class="wrapper">

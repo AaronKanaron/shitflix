@@ -238,4 +238,27 @@ a {
   outline: none;
   padding-left: 1.5vmax;
 }
+
+.skeleton {
+  -webkit-animation: skeleton 1s linear infinite alternate;
+          animation: skeleton 1s linear infinite alternate;
+}
+
+@-webkit-keyframes skeleton {
+  0% {
+    background-color: #404040;
+  }
+  100% {
+    background-color: #666666;
+  }
+}
+
+@keyframes skeleton {
+  0% {
+    background-color: #404040;
+  }
+  100% {
+    background-color: #666666;
+  }
+}
 /*# sourceMappingURL=global.css.map */

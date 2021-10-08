@@ -4,6 +4,15 @@ window.addEventListener("DOMContentLoaded", () => {
 	searchContent(searchQuery)
 })
 
+for (let cards = 0; cards < 10; cards++) {
+	document.getElementById("content").innerHTML += 
+	`
+	<div class="card skeleton">
+		<img src="" alt="">
+	</div>
+	`
+}
+
 
 async function searchContent(query) {
 	Promise.all([
@@ -17,6 +26,8 @@ async function searchContent(query) {
 		}));
 
 	}).then((data) => {
+
+		document.getElementById("content").innerHTML = ""
 		document.getElementById("title").innerHTML = "Showing results for: " + query
 		
 		let result = []
@@ -38,14 +49,14 @@ async function searchContent(query) {
 				if(obj.type = "movie") {
 					document.getElementById("content").innerHTML += 
 					`
-					<div class="card" onclick="window.location.href = 'movie.html?id=` + obj.id +`'">
+					<div class="card" onclick="window.location.href = 'content/movie?id=` + obj.id +`'">
 						<img src="https://image.tmdb.org/t/p/w500` + obj.poster_path + `" alt="` + obj.title + `">
 					</div>
 					`
 				} else {
 					document.getElementById("content").innerHTML += 
 					`
-					<div class="card" onclick="window.location.href = 'show.html?id=` + obj.id +`'">
+					<div class="card" onclick="window.location.href = 'content/show?id=` + obj.id +`'">
 						<img src="https://image.tmdb.org/t/p/w500` + obj.poster_path + `" alt="` + obj.title + `">
 					</div>
 					`
