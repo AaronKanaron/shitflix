@@ -68,13 +68,13 @@ body{
 		position: relative;
 		user-select: none;
 		@media only screen and (max-width: 1000px) {
-			flex-basis: calc(100% / 4 - (10px * 2) - (20px / 4));
-		}
-		@media only screen and (max-width: 750px) {
 			flex-basis: calc(100% / 3 - (10px * 2) - (20px / 3));
 		}
-		@media only screen and (max-width: 550px) {
+		@media only screen and (max-width: 750px) {
 			flex-basis: calc(100% / 2 - (10px * 2) - (20px / 2));
+		}
+		@media only screen and (max-width: 550px) {
+			flex-basis: calc(100% / 1.25 - (10px * 2) - (20px / 1.25));
 		}
 		@media only screen and (max-width: 400px) {
 			flex-basis: calc(100% / 1.25 - (10px * 2) - (20px / 1.25));
